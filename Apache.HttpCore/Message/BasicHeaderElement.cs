@@ -83,7 +83,7 @@ namespace Org.Apache.Http.Message
 
 		public virtual NameValuePair[] GetParameters()
 		{
-			return this.parameters.Clone();
+            return (NameValuePair[])this.parameters.Clone();
 		}
 
 		public virtual int GetParameterCount()

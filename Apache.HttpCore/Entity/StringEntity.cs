@@ -26,6 +26,7 @@ using Org.Apache.Http.Entity;
 using Org.Apache.Http.Protocol;
 using Org.Apache.Http.Util;
 using Sharpen;
+using System.Linq;
 
 namespace Org.Apache.Http.Entity
 {
@@ -71,7 +72,7 @@ namespace Org.Apache.Http.Entity
 			}
 			try
 			{
-				this.content = Sharpen.Runtime.GetBytesForString(@string, charset.Name());
+                this.content = Sharpen.Runtime.GetBytesForString(@string, charset.Name());
 			}
 			catch (UnsupportedEncodingException)
 			{

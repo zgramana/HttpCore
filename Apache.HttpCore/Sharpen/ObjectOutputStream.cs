@@ -1,6 +1,3 @@
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-
 namespace Sharpen
 {
 	using System;
@@ -8,6 +5,11 @@ namespace Sharpen
 
 	internal class ObjectOutputStream : OutputStream
 	{
+        public void WriteObject (ISerializable ser)
+        {
+            throw new NotImplementedException ();
+        }
+
 		private BinaryWriter bw;
 
 		public ObjectOutputStream (OutputStream os)
@@ -19,11 +21,5 @@ namespace Sharpen
 		{
 			this.bw.Write (i);
 		}
-
-        public void WriteObject (ISerializable ser)
-        {
-            var serializer = new BinaryFormatter();
-            serializer.Serialize(bw.BaseStream, ser);
-        }
 	}
 }
