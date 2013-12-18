@@ -61,10 +61,7 @@ namespace Org.Apache.Http.Impl.IO
 		/// <remarks>Creates an instance of AbstractMessageParser.</remarks>
 		/// <param name="buffer">the session input buffer.</param>
 		/// <param name="parser">the line parser.</param>
-		/// <param name="params">HTTP parameters.</param>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use AbstractMessageParser{T}.AbstractMessageParser(Org.Apache.Http.IO.SessionInputBuffer, Org.Apache.Http.Message.LineParser, Org.Apache.Http.Config.MessageConstraints)"
-			)]
+		/// <param name="params">HTTP parameters.</param>		[System.ObsoleteAttribute(@"(4.3) use AbstractMessageParser{T}.AbstractMessageParser(Org.Apache.Http.IO.SessionInputBuffer, Org.Apache.Http.Message.LineParser, Org.Apache.Http.Config.MessageConstraints)")]
 		public AbstractMessageParser(SessionInputBuffer buffer, LineParser parser, HttpParams
 			 @params) : base()
 		{
@@ -292,12 +289,12 @@ namespace Org.Apache.Http.Impl.IO
 				case Headers:
 				{
 					//$FALL-THROUGH$
-					Header[] headers = Org.Apache.Http.Impl.IO.AbstractMessageParser.ParseHeaders(this
+                    Header[] headers = Org.Apache.Http.Impl.IO.AbstractMessageParser<T>.ParseHeaders(this
 						.sessionBuffer, this.messageConstraints.GetMaxHeaderCount(), this.messageConstraints
 						.GetMaxLineLength(), this.lineParser, this.headerLines);
 					this.message.SetHeaders(headers);
 					T result = this.message;
-					this.message = null;
+                    this.message = default(T);
 					this.headerLines.Clear();
 					this.state = HeadLine;
 					return result;

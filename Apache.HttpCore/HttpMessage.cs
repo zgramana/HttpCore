@@ -194,15 +194,13 @@ namespace Org.Apache.Http
 		/// 	</see>
 		/// .
 		/// </summary>
-		[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-			)]
+		[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 		HttpParams GetParams();
 
 		/// <summary>Provides parameters to be used for the processing of this message.</summary>
 		/// <remarks>Provides parameters to be used for the processing of this message.</remarks>
 		/// <param name="params">the parameters</param>
-		[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-			)]
+		[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 		void SetParams(HttpParams @params);
 	}
 }

@@ -161,10 +161,7 @@ namespace Org.Apache.Http.Util
 		/// <returns>the character set, or null if not found</returns>
 		/// <exception cref="Org.Apache.Http.ParseException">if header elements cannot be parsed
 		/// 	</exception>
-		/// <exception cref="System.ArgumentException">if entity is null</exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1.3) use Org.Apache.Http.Entity.ContentType.GetOrDefault(Org.Apache.Http.HttpEntity)"
-			)]
+		/// <exception cref="System.ArgumentException">if entity is null</exception>      [System.ObsoleteAttribute(@"(4.1.3) use Org.Apache.Http.Entity.ContentType.GetOrDefault(Org.Apache.Http.HttpEntity)")]
 		public static string GetContentCharSet(HttpEntity entity)
 		{
 			Args.NotNull(entity, "Entity");
@@ -191,10 +188,8 @@ namespace Org.Apache.Http.Util
 		/// <exception cref="Org.Apache.Http.ParseException">if header elements cannot be parsed
 		/// 	</exception>
 		/// <exception cref="System.ArgumentException">if entity is null</exception>
-		/// <since>4.1</since>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1.3) use Org.Apache.Http.Entity.ContentType.GetOrDefault(Org.Apache.Http.HttpEntity)"
-			)]
+		/// <since>4.1</si        [System.ObsoleteAttribute(@"(4.1.3) use Org.Apache.Http.Entity.ContentType.GetOrDefault(Org.Apache.Http.HttpEntity)")]y)"
+
 		public static string GetContentMimeType(HttpEntity entity)
 		{
 			Args.NotNull(entity, "Entity");

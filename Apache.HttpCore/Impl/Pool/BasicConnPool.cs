@@ -55,11 +55,7 @@ namespace Org.Apache.Http.Impl.Pool
 		public BasicConnPool(ConnFactory<HttpHost, HttpClientConnection> connFactory) : base
 			(connFactory, 2, 20)
 		{
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use BasicConnPool(Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig)"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.3) use BasicConnPool(Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig)")]
 		public BasicConnPool(HttpParams @params) : base(new BasicConnFactory(@params), 2, 
 			20)
 		{

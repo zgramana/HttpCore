@@ -49,10 +49,7 @@ namespace Org.Apache.Http.Impl.IO
 		/// <remarks>Creates an instance of AbstractMessageWriter.</remarks>
 		/// <param name="buffer">the session output buffer.</param>
 		/// <param name="formatter">the line formatter.</param>
-		/// <param name="params">HTTP parameters.</param>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) useAbstractMessageWriter{T}.AbstractMessageWriter(Org.Apache.Http.IO.SessionOutputBuffer, Org.Apache.Http.Message.LineFormatter)"
-			)]
+		/// <param name="params">HTTP parameters.</param>		[System.ObsoleteAttribute(@"(4.3) useAbstractMessageWriter{T}.AbstractMessageWriter(Org.Apache.Http.IO.SessionOutputBuffer, Org.Apache.Http.Message.LineFormatter)")]
 		public AbstractMessageWriter(SessionOutputBuffer buffer, LineFormatter formatter, 
 			HttpParams @params) : base()
 		{

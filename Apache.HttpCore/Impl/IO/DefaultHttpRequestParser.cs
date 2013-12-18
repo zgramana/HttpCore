@@ -55,10 +55,7 @@ namespace Org.Apache.Http.Impl.IO
 		/// <see cref="Org.Apache.Http.IHttpRequest">Org.Apache.Http.IHttpRequest</see>
 		/// s.
 		/// </param>
-		/// <param name="params">HTTP parameters.</param>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) useDefaultHttpRequestParser(Org.Apache.Http.IO.SessionInputBuffer, Org.Apache.Http.Message.LineParser, Org.Apache.Http.HttpRequestFactory, Org.Apache.Http.Config.MessageConstraints)"
-			)]
+		/// <param name="params">HTTP parameters.</param>		[System.ObsoleteAttribute(@"(4.3) useDefaultHttpRequestParser(Org.Apache.Http.IO.SessionInputBuffer, Org.Apache.Http.Message.LineParser, Org.Apache.Http.HttpRequestFactory, Org.Apache.Http.Config.MessageConstraints)")]
 		public DefaultHttpRequestParser(SessionInputBuffer buffer, LineParser lineParser, 
 			HttpRequestFactory requestFactory, HttpParams @params) : base(buffer, lineParser
 			, @params)

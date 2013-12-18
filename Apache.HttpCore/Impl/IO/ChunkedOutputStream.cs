@@ -55,10 +55,7 @@ namespace Org.Apache.Http.Impl.IO
 		/// <remarks>Wraps a session output buffer and chunk-encodes the output.</remarks>
 		/// <param name="out">The session output buffer</param>
 		/// <param name="bufferSize">The minimum chunk size (excluding last chunk)</param>
-		/// <exception cref="System.IO.IOException">not thrown</exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use ChunkedOutputStream(int, Org.Apache.Http.IO.SessionOutputBuffer)"
-			)]
+		/// <exception cref="System.IO.IOException">not thrown</exception>        [System.ObsoleteAttribute(@"(4.3) use ChunkedOutputStream(int, Org.Apache.Http.IO.SessionOutputBuffer)")]
 		public ChunkedOutputStream(SessionOutputBuffer @out, int bufferSize) : this(bufferSize
 			, @out)
 		{
@@ -70,10 +67,8 @@ namespace Org.Apache.Http.Impl.IO
 		/// size of 2048 was chosen because the chunk overhead is less than 0.5%
 		/// </remarks>
 		/// <param name="out">the output buffer to wrap</param>
-		/// <exception cref="System.IO.IOException">not thrown</exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use ChunkedOutputStream(int, Org.Apache.Http.IO.SessionOutputBuffer)"
-			)]
+		/// <exception cref="System.IO.IOException">not thrown</exce      [System.ObsoleteAttribute(@"(4.3) use ChunkedOutputStream(int, Org.Apache.Http.IO.SessionOutputBuffer)")]fer)"
+
 		public ChunkedOutputStream(SessionOutputBuffer @out) : this(2048, @out)
 		{
 		}

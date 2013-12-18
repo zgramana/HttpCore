@@ -27,8 +27,7 @@ using Sharpen;
 namespace Org.Apache.Http.Params
 {
 	/// <since>4.3</since>
-	[System.ObsoleteAttribute(@"(4.3) provided for compatibility with HttpParams . Do not use."
-		)]
+	[System.ObsoleteAttribute(@"(4.3) provided for compatibility with HttpParams . Do not use.")]
 	public sealed class HttpParamConfig
 	{
 		private HttpParamConfig()

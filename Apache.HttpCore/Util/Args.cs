@@ -53,7 +53,7 @@ namespace Org.Apache.Http.Util
 			return argument;
 		}
 
-		public static T NotEmpty<T>(T argument, string name) where T:CharSequence
+        public static T NotEmpty<T>(T argument, string name) where T:CharSequence
 		{
 			if (argument == null)
 			{
@@ -65,6 +65,19 @@ namespace Org.Apache.Http.Util
 			}
 			return argument;
 		}
+
+        public static string NotEmpty(string argument, string name)
+        {
+            if (argument == null)
+            {
+                throw new ArgumentException(name + " may not be null or empty");
+            }
+            if (TextUtils.IsEmpty(argument))
+            {
+                throw new ArgumentException(name + " may not be empty");
+            }
+            return argument;
+        }
 
 		public static T NotBlank<T>(T argument, string name) where T:CharSequence
 		{
@@ -78,6 +91,19 @@ namespace Org.Apache.Http.Util
 			}
 			return argument;
 		}
+
+        public static string NotBlank(string argument, string name)
+        {
+            if (argument == null)
+            {
+                throw new ArgumentException(name + " may not be null");
+            }
+            if (TextUtils.IsBlank(argument))
+            {
+                throw new ArgumentException(name + " may not be blank");
+            }
+            return argument;
+        }
 
 		public static T NotEmpty<E, T>(T argument, string name) where T:ICollection<E>
 		{

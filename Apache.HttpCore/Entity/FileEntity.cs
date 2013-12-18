@@ -34,10 +34,7 @@ namespace Org.Apache.Http.Entity
 	/// <since>4.0</since>
 	public class FileEntity : AbstractHttpEntity, ICloneable
 	{
-		protected internal readonly FilePath file;
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1.3) FileEntity(Sharpen.FilePath, ContentType)")]
+		protected internal readonly FilePath file;		[System.ObsoleteAttribute(@"(4.1.3) FileEntity(Sharpen.FilePath, ContentType)")]
 		public FileEntity(FilePath file, string contentType) : base()
 		{
 			this.file = Args.NotNull(file, "File");

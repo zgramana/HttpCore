@@ -112,9 +112,7 @@ namespace Org.Apache.Http.Entity
 		/// <exception cref="System.IO.UnsupportedEncodingException">If the named charset is not supported.
 		/// 	</exception>
 		/// <since>4.1</since>
-		/// <exception cref="System.ArgumentException">if the string parameter is null</exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1.3) use StringEntity(string, ContentType)")]
+		/// <exception cref="System.ArgumentException">if the string parameter is null</exception>		[System.ObsoleteAttribute(@"(4.1.3) use StringEntity(string, ContentType)")]
 		public StringEntity(string @string, string mimeType, string charset) : base()
 		{
 			Args.NotNull(@string, "Source string");

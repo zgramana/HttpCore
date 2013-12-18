@@ -293,7 +293,7 @@ namespace Org.Apache.Http.Impl.IO
 		{
 			try
 			{
-				this.footers = AbstractMessageParser.ParseHeaders(@in, -1, -1, null);
+                this.footers = DefaultHttpRequestParser.ParseHeaders(@in, -1, -1, null);
 			}
 			catch (HttpException ex)
 			{
@@ -340,7 +340,7 @@ namespace Org.Apache.Http.Impl.IO
 
 		public virtual Header[] GetFooters()
 		{
-			return this.footers.Clone();
+            return this.footers.Clone() as Header[];
 		}
 	}
 }

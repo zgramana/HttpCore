@@ -36,13 +36,7 @@ namespace Org.Apache.Http.Message
 	/// <since>4.0</since>
 	public abstract class AbstractHttpMessage : HttpMessage
 	{
-		protected internal HeaderGroup headergroup;
-
-		[Obsolete]
-		protected internal HttpParams @params;
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use AbstractHttpMessage()")]
+		protected internal HeaderGroup headergroup;		protected internal HttpParams @params;		[System.ObsoleteAttribute(@"(4.3) use AbstractHttpMessage()")]
 		protected internal AbstractHttpMessage(HttpParams @params) : base()
 		{
 			this.headergroup = new HeaderGroup();
@@ -128,14 +122,12 @@ namespace Org.Apache.Http.Message
 			{
 				return;
 			}
-			for (Org.Apache.Http.HeaderIterator i = this.headergroup.Iterator(); i.HasNext(); )
-			{
-				Header header = i.NextHeader();
-				if (Sharpen.Runtime.EqualsIgnoreCase(name, header.GetName()))
-				{
-					i.Remove();
-				}
-			}
+            var headers = headergroup.GetAllHeaders();
+
+            foreach(var header in headers) {
+                if (name.Equals(header.GetName(), StringComparison.InvariantCultureIgnoreCase))
+                    headergroup.RemoveHeader(header);
+            }
 		}
 
 		// non-javadoc, see interface HttpMessage
@@ -148,11 +140,7 @@ namespace Org.Apache.Http.Message
 		public virtual Org.Apache.Http.HeaderIterator HeaderIterator(string name)
 		{
 			return this.headergroup.Iterator(name);
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use constructor parameters of configuration API provided by HttpClient"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.3) use constructor parameters of configuration API provided by HttpClient")]
 		public virtual HttpParams GetParams()
 		{
 			if (this.@params == null)
@@ -160,11 +148,7 @@ namespace Org.Apache.Http.Message
 				this.@params = new BasicHttpParams();
 			}
 			return this.@params;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use constructor parameters of configuration API provided by HttpClient"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.3) use constructor parameters of configuration API provided by HttpClient")]
 		public virtual void SetParams(HttpParams @params)
 		{
 			this.@params = Args.NotNull(@params, "HTTP parameters");

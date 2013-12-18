@@ -42,8 +42,7 @@ namespace Org.Apache.Http.Impl
 			CodingErrorAction unmappable = cconfig.GetUnmappableInputAction();
 			if (charset != null)
 			{
-				return charset.NewDecoder().OnMalformedInput(malformed != null ? malformed : CodingErrorAction
-					.Report).OnUnmappableCharacter(unmappable != null ? unmappable : CodingErrorAction
+				return charset.NewDecoder ().OnMalformedInput (malformed).OnUnmappableCharacter(unmappable != null ? unmappable : CodingErrorAction
 					.Report);
 			}
 			else
@@ -63,9 +62,7 @@ namespace Org.Apache.Http.Impl
 			{
 				CodingErrorAction malformed = cconfig.GetMalformedInputAction();
 				CodingErrorAction unmappable = cconfig.GetUnmappableInputAction();
-				return charset.NewEncoder().OnMalformedInput(malformed != null ? malformed : CodingErrorAction
-					.Report).OnUnmappableCharacter(unmappable != null ? unmappable : CodingErrorAction
-					.Report);
+                return charset.NewEncoder ().OnMalformedInput (malformed).OnUnmappableCharacter(unmappable);
 			}
 			else
 			{

@@ -40,10 +40,7 @@ namespace Org.Apache.Http.Protocol
 	/// <since>4.0</since>
 	public class RequestExpectContinue : IHttpRequestInterceptor
 	{
-		private readonly bool activeByDefault;
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use RequestExpectContinue(bool)")]
+		private readonly bool activeByDefault;		[System.ObsoleteAttribute(@"(4.3) use RequestExpectContinue(bool)")]
 		public RequestExpectContinue() : this(false)
 		{
 		}

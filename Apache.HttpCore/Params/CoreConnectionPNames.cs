@@ -27,8 +27,7 @@ namespace Org.Apache.Http.Params
 	/// <summary>Defines parameter names for connections in HttpCore.</summary>
 	/// <remarks>Defines parameter names for connections in HttpCore.</remarks>
 	/// <since>4.0</since>
-	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-		)]
+	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 	public abstract class CoreConnectionPNames
 	{
 		/// <summary>

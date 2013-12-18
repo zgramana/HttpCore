@@ -76,10 +76,7 @@ namespace Org.Apache.Http.Protocol
 				}
 				Sharpen.Collections.Remove(this.map, pattern);
 			}
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) do not use")]
+		}		[System.ObsoleteAttribute(@"(4.1) do not use")]
 		public virtual void SetHandlers(IDictionary<string, T> map)
 		{
 			lock (this)
@@ -88,10 +85,7 @@ namespace Org.Apache.Http.Protocol
 				this.map.Clear();
 				this.map.PutAll(map);
 			}
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) do not use")]
+		}		[System.ObsoleteAttribute(@"(4.1) do not use")]
 		public virtual void SetObjects(IDictionary<string, T> map)
 		{
 			lock (this)
@@ -100,10 +94,7 @@ namespace Org.Apache.Http.Protocol
 				this.map.Clear();
 				this.map.PutAll(map);
 			}
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) do not use")]
+		}		[System.ObsoleteAttribute(@"(4.1) do not use")]
 		public virtual IDictionary<string, T> GetObjects()
 		{
 			lock (this)

@@ -178,10 +178,7 @@ namespace Org.Apache.Http.IO
 		/// IOException
 		/// if an I/O error occurs.
 		/// </exception>
-		/// <exception cref="System.IO.IOException"></exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) do not use. This function should be provided at the connection level"
-			)]
+		/// <exception cref="System.IO.IOException"></exception>		[System.ObsoleteAttribute(@"(4.3) do not use. This function should be provided at the connection level")]
 		bool IsDataAvailable(int timeout);
 
 		/// <summary>

@@ -94,10 +94,7 @@ namespace Org.Apache.Http.Entity
 			return wrappedEntity.IsStreaming();
 		}
 
-		/// <exception cref="System.IO.IOException"></exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) Either use GetContent() and call System.IO.InputStream.Close() on that; otherwise call WriteTo(System.IO.OutputStream) which is required to free the resources."
-			)]
+		/// <exception cref="System.IO.IOException"></exception>      [System.ObsoleteAttribute(@"(4.1) Either use GetContent() and call System.IO.InputStream.Close() on that; otherwise call WriteTo(System.IO.OutputStream) which is required to free the resources.")]
 		public virtual void ConsumeContent()
 		{
 			wrappedEntity.ConsumeContent();

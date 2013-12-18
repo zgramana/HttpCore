@@ -49,7 +49,7 @@ namespace Org.Apache.Http.Config
 
 		public Org.Apache.Http.Config.RegistryBuilder<I> Register(string id, I item)
 		{
-			Args.NotEmpty(id, "ID");
+            Args.NotEmpty(id, "ID");
 			Args.NotNull(item, "Item");
 			items.Put(id.ToLower(CultureInfo.InvariantCulture), item);
 			return this;

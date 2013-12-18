@@ -58,11 +58,7 @@ namespace Org.Apache.Http.Impl.Pool
 
 		private readonly SocketConfig sconfig;
 
-		private readonly HttpConnectionFactory<HttpClientConnection> connFactory;
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) useBasicConnFactory(Javax.Net.SocketFactory, Sharpen.SSLSocketFactory, int, Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig) ."
-			)]
+		private readonly HttpConnectionFactory<HttpClientConnection> connFactory;		[System.ObsoleteAttribute(@"(4.3) useBasicConnFactory(Javax.Net.SocketFactory, Sharpen.SSLSocketFactory, int, Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig) .")]
 		public BasicConnFactory(SSLSocketFactory sslfactory, HttpParams @params) : base()
 		{
 			Args.NotNull(@params, "HTTP params");
@@ -73,11 +69,7 @@ namespace Org.Apache.Http.Impl.Pool
 			this.sconfig = HttpParamConfig.GetSocketConfig(@params);
 			this.connFactory = new DefaultBHttpClientConnectionFactory(HttpParamConfig.GetConnectionConfig
 				(@params));
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) useBasicConnFactory(int, Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig) ."
-			)]
+		}		[System.ObsoleteAttribute(@"(4.3) useBasicConnFactory(int, Org.Apache.Http.Config.SocketConfig, Org.Apache.Http.Config.ConnectionConfig) .")]
 		public BasicConnFactory(HttpParams @params) : this(null, @params)
 		{
 		}
@@ -112,9 +104,7 @@ namespace Org.Apache.Http.Impl.Pool
 		{
 		}
 
-		/// <exception cref="System.IO.IOException"></exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) no longer used.")]
+		/// <exception cref="System.IO.IOException"></exception>		[System.ObsoleteAttribute(@"(4.3) no longer used.")]
 		protected internal virtual HttpClientConnection Create(Socket socket, HttpParams 
 			@params)
 		{

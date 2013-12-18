@@ -91,8 +91,7 @@ namespace Org.Apache.Http.Protocol
 			}
 		}
 
-//		[Obsolete]
-//		[System.ObsoleteAttribute(@"(4.3) do not use.")]
+////		[System.ObsoleteAttribute(@"(4.3) do not use.")]
 //		public ImmutableHttpProcessor(HttpRequestInterceptorList requestInterceptors, HttpResponseInterceptorList
 //			 responseInterceptors) : base()
 //		{

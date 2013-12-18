@@ -36,8 +36,7 @@ namespace Org.Apache.Http.Params
 	/// </summary>
 	/// <since>4.0</since>
 	[System.Serializable]
-	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-		)]
+	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 	public class BasicHttpParams : AbstractHttpParams, ICloneable
 	{
 		private const long serialVersionUID = -7086398485908701455L;

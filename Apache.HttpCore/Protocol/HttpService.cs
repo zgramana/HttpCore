@@ -82,10 +82,7 @@ namespace Org.Apache.Http.Protocol
 		/// <param name="handlerResolver">the handler resolver. May be null.</param>
 		/// <param name="expectationVerifier">the expectation verifier. May be null.</param>
 		/// <param name="params">the HTTP parameters</param>
-		/// <since>4.1</since>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerMapper, HttpExpectationVerifier)"
-			)]
+		/// <since>4.1</since>		[System.ObsoleteAttribute(@"(4.3) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerMapper, HttpExpectationVerifier)")]
 		public HttpService(HttpProcessor processor, ConnectionReuseStrategy connStrategy, 
 			HttpResponseFactory responseFactory, HttpRequestHandlerResolver handlerResolver, 
 			HttpExpectationVerifier expectationVerifier, HttpParams @params) : this(processor
@@ -103,10 +100,7 @@ namespace Org.Apache.Http.Protocol
 		/// <param name="responseFactory">the response factory</param>
 		/// <param name="handlerResolver">the handler resolver. May be null.</param>
 		/// <param name="params">the HTTP parameters</param>
-		/// <since>4.1</since>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerMapper)"
-			)]
+		/// <since>4.1</since>		[System.ObsoleteAttribute(@"(4.3) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerMapper)")]
 		public HttpService(HttpProcessor processor, ConnectionReuseStrategy connStrategy, 
 			HttpResponseFactory responseFactory, HttpRequestHandlerResolver handlerResolver, 
 			HttpParams @params) : this(processor, connStrategy, responseFactory, new HttpService.HttpRequestHandlerResolverAdapter
@@ -119,10 +113,7 @@ namespace Org.Apache.Http.Protocol
 		/// <remarks>Create a new HTTP service.</remarks>
 		/// <param name="proc">the processor to use on requests and responses</param>
 		/// <param name="connStrategy">the connection reuse strategy</param>
-		/// <param name="responseFactory">the response factory</param>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerResolver, Org.Apache.Http.Params.HttpParams)"
-			)]
+		/// <param name="responseFactory">the response factory</param>		[System.ObsoleteAttribute(@"(4.1) use HttpService(HttpProcessor, Org.Apache.Http.ConnectionReuseStrategy, Org.Apache.Http.HttpResponseFactory, HttpRequestHandlerResolver, Org.Apache.Http.Params.HttpParams)")]
 		public HttpService(HttpProcessor proc, ConnectionReuseStrategy connStrategy, HttpResponseFactory
 			 responseFactory) : base()
 		{
@@ -193,62 +184,37 @@ namespace Org.Apache.Http.Protocol
 		public HttpService(HttpProcessor processor, HttpRequestHandlerMapper handlerMapper
 			) : this(processor, null, null, handlerMapper, null)
 		{
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set HttpProcessor using constructor")]
+		}		[System.ObsoleteAttribute(@"(4.1) set HttpProcessor using constructor")]
 		public virtual void SetHttpProcessor(HttpProcessor processor)
 		{
 			Args.NotNull(processor, "HTTP processor");
 			this.processor = processor;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.ConnectionReuseStrategy using constructor"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.ConnectionReuseStrategy using constructor")]
 		public virtual void SetConnReuseStrategy(ConnectionReuseStrategy connStrategy)
 		{
 			Args.NotNull(connStrategy, "Connection reuse strategy");
 			this.connStrategy = connStrategy;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.HttpResponseFactory using constructor"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.HttpResponseFactory using constructor")]
 		public virtual void SetResponseFactory(HttpResponseFactory responseFactory)
 		{
 			Args.NotNull(responseFactory, "Response factory");
 			this.responseFactory = responseFactory;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.HttpResponseFactory using constructor"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.1) set Org.Apache.Http.HttpResponseFactory using constructor")]
 		public virtual void SetParams(HttpParams @params)
 		{
 			this.@params = @params;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set HttpRequestHandlerResolver using constructor"
-			)]
+		}		[System.ObsoleteAttribute(@"(4.1) set HttpRequestHandlerResolver using constructor")]
 		public virtual void SetHandlerResolver(HttpRequestHandlerResolver handlerResolver
 			)
 		{
 			this.handlerMapper = new HttpService.HttpRequestHandlerResolverAdapter(handlerResolver
 				);
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) set HttpExpectationVerifier using constructor")]
+		}		[System.ObsoleteAttribute(@"(4.1) set HttpExpectationVerifier using constructor")]
 		public virtual void SetExpectationVerifier(HttpExpectationVerifier expectationVerifier
 			)
 		{
 			this.expectationVerifier = expectationVerifier;
-		}
-
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.3) no longer used.")]
+		}		[System.ObsoleteAttribute(@"(4.3) no longer used.")]
 		public virtual HttpParams GetParams()
 		{
 			return this.@params;

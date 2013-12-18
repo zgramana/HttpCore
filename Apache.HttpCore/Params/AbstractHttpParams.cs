@@ -33,8 +33,7 @@ namespace Org.Apache.Http.Params
 	/// generic getters and setters.
 	/// </remarks>
 	/// <since>4.0</since>
-	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-		)]
+    [System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 	public abstract class AbstractHttpParams : HttpParams, HttpParamsNames
 	{
 		/// <summary>Instantiates parameters.</summary>

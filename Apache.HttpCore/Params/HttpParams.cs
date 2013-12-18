@@ -44,8 +44,7 @@ namespace Org.Apache.Http.Params
 	/// to obtain default values of parameters not present in the local set.
 	/// </remarks>
 	/// <since>4.0</since>
-	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-		)]
+	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 	public interface HttpParams
 	{
 		/// <summary>Obtains the value of the given parameter.</summary>

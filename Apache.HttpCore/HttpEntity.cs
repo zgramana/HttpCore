@@ -216,8 +216,7 @@ namespace Org.Apache.Http
 		/// </remarks>
 		/// <exception cref="System.IO.IOException">if an I/O error occurs.</exception>
 		/// <seealso cref="GetContent()">and #writeTo(OutputStream)</seealso>
-		[System.ObsoleteAttribute(@"(4.1) Use Org.Apache.Http.Util.EntityUtils.Consume(HttpEntity)"
-			)]
+        [System.ObsoleteAttribute(@"(4.1) Use Org.Apache.Http.Util.EntityUtils.Consume(HttpEntity)")]
 		void ConsumeContent();
 	}
 }

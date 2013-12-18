@@ -47,9 +47,7 @@ namespace Org.Apache.Http.Message
 		/// can be many instances of the class itself and of derived classes.
 		/// The instance here provides non-customized, default behavior.
 		/// </remarks>
-		[System.ObsoleteAttribute(@"(4.3) use Instance")]
-		[Obsolete]
-		public static readonly Org.Apache.Http.Message.BasicHeaderValueParser Default = new 
+		[System.ObsoleteAttribute(@"(4.3) use Instance")]		public static readonly Org.Apache.Http.Message.BasicHeaderValueParser Default = new 
 			Org.Apache.Http.Message.BasicHeaderValueParser();
 
 		public static readonly Org.Apache.Http.Message.BasicHeaderValueParser Instance = 

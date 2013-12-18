@@ -53,9 +53,7 @@ namespace Org.Apache.Http.Message
 		/// be many instances of the class itself and of derived classes.
 		/// The instance here provides non-customized, default behavior.
 		/// </remarks>
-		[System.ObsoleteAttribute(@"(4.3) use Instance")]
-		[Obsolete]
-		public static readonly Org.Apache.Http.Message.BasicLineFormatter Default = new Org.Apache.Http.Message.BasicLineFormatter
+		[System.ObsoleteAttribute(@"(4.3) use Instance")]		public static readonly Org.Apache.Http.Message.BasicLineFormatter Default = new Org.Apache.Http.Message.BasicLineFormatter
 			();
 
 		public static readonly Org.Apache.Http.Message.BasicLineFormatter Instance = new 

@@ -322,5 +322,11 @@ namespace Org.Apache.Http.Message
 		{
 			return this.headers.ToString();
 		}
+
+        public virtual int Length()
+        {
+            return this.headers.Count;
+        }
+
 	}
 }

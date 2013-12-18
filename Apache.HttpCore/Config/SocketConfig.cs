@@ -128,9 +128,9 @@ namespace Org.Apache.Http.Config
 		}
 
 		/// <exception cref="Sharpen.CloneNotSupportedException"></exception>
-		protected internal virtual Org.Apache.Http.Config.SocketConfig Clone()
+        public object Clone()
 		{
-			return (Org.Apache.Http.Config.SocketConfig)base.Clone();
+            return MemberwiseClone ();
 		}
 
 		public override string ToString()

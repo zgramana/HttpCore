@@ -78,49 +78,27 @@ namespace Org.Apache.Http.Protocol
 
 		public static readonly Encoding DefProtocolCharset = Consts.Ascii;
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string Utf8 = "UTF-8";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string Utf8 = "UTF-8";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string Utf16 = "UTF-16";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string Utf16 = "UTF-16";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string UsAscii = "US-ASCII";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string UsAscii = "US-ASCII";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string Ascii = "ASCII";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string Ascii = "ASCII";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string Iso88591 = "ISO-8859-1";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string Iso88591 = "ISO-8859-1";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string DefaultContentCharset = Iso88591;
+		[System.ObsoleteAttribute(@"(4.2)")]		public const string DefaultContentCharset = Iso88591;
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string DefaultProtocolCharset = UsAscii;
+		[System.ObsoleteAttribute(@"(4.2)")]		public const string DefaultProtocolCharset = UsAscii;
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string OctetStreamType = "application/octet-stream";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string OctetStreamType = "application/octet-stream";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string PlainTextType = "text/plain";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string PlainTextType = "text/plain";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string CharsetParam = "; charset=";
+        [System.ObsoleteAttribute(@"(4.2)")]		public const string CharsetParam = "; charset=";
 
-		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
-		public const string DefaultContentType = OctetStreamType;
+		[System.ObsoleteAttribute(@"(4.2)")]		public const string DefaultContentType = OctetStreamType;
 
 		// <US-ASCII CR, carriage return (13)>
 		// <US-ASCII LF, linefeed (10)>

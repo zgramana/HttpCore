@@ -29,8 +29,7 @@ namespace Org.Apache.Http.Params
 	/// <remarks>Gives access to the full set of parameter names.</remarks>
 	/// <seealso cref="HttpParams">HttpParams</seealso>
 	/// <since>4.2</since>
-	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'"
-		)]
+	[System.ObsoleteAttribute(@"(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'")]
 	public interface HttpParamsNames
 	{
 		/// <summary>

@@ -35,7 +35,6 @@ namespace Org.Apache.Http.Entity
 	public class ByteArrayEntity : AbstractHttpEntity, ICloneable
 	{
 		[System.ObsoleteAttribute(@"(4.2)")]
-		[Obsolete]
 		protected internal readonly byte[] content;
 
 		private readonly byte[] b;

@@ -197,9 +197,7 @@ namespace Org.Apache.Http.Entity
 		/// <summary>The default implementation does not consume anything.</summary>
 		/// <remarks>The default implementation does not consume anything.</remarks>
 		/// <exception cref="System.IO.IOException"></exception>
-		[Obsolete]
-		[System.ObsoleteAttribute(@"(4.1) Either use Org.Apache.Http.HttpEntity.GetContent() and call System.IO.InputStream.Close() on that; otherwise call Org.Apache.Http.HttpEntity.WriteTo(System.IO.OutputStream) which is required to free the resources."
-			)]
+        [System.ObsoleteAttribute(@"(4.1) Either use Org.Apache.Http.HttpEntity.GetContent() and call System.IO.InputStream.Close() on that; otherwise call Org.Apache.Http.HttpEntity.WriteTo(System.IO.OutputStream) which is required to free the resources.")]
 		public virtual void ConsumeContent()
 		{
 		}
