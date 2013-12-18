@@ -1,6 +1,6 @@
 HttpCore
 ========
 
-Raw C# conversion of Apache's HttpCore Java library.
+Raw C# conversion of Apache's HttpCore and HttpClient Java libraries.
 
 Doesn't compile.
